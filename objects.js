@@ -9,7 +9,7 @@
 //};
 //console.log (person.name)
 
-//Activity 
+//Class Activity 
 
 let day = "Saturday";
 let alarm = " ";
@@ -43,46 +43,54 @@ sayHi(){
 };
 console.log(person.sayHi());
 
+
+
 //Activity 2
 
-let pet = {
-    catName: "Remi",
-    typeOfPet: "Cat",
-    age: 4,
-    colour: "brown" 
-};
- catEat:()=>{
-     return "Cat is Eating";
- },
- //catDrink:() =>{
-   //  return "Cat is Drinking";
- //};
- console.log (pet.catEat());
- //console.log (pet.catDrink());
+//let pet = {
+  //  catName: "Remi",
+    //typeOfPet: "Cat",
+    //age: 4,
+    //colour: "brown" 
+//};
+//console.log(`My pet ${typeofPet} is `)
+ 
+
+
 
 //Activity 3
 
 const coffeeShop = {
     branch: "MCR",
-    drinks: ["Coffee - £2.50", "Tea - £1.50"],
-    food: ["Sandwich - £3", "Soup - £2"], 
+    drinks: ["Coffee", 2.50, "Tea", 1.50],
+    food: ["Sandwich", 3, "Soup", 2], 
+drinksOrdered (drink){
+ let order = " "
+ let cost = 0
+  for (let i=0; i < (drink.length); i++){
+  for (let j=0; j < (this.drinks.length); j++){
+     if (drink[i]===this.drinks[j]){
+         cost += this.drinks[j+1]
+         order = order + `${drink[i]} £${this.drinks[j+1]}`
+     }
+    }
+}
+return `Drink ${order}\nCost - £${cost}\n`
 },
-
-for (const i=0; i < coffeeShop.length; i ++){
-    
+foodOrdered (food){
+    let order = " "
+    let cost = 0
+    for (let i = 0; i < (food.length); i++){
+    for (let j = 0; j < (this.food.length); j++){
+    if (food[i]===this.food[j]){
+        cost += this.food[j+1]
+        order = order + `${food[i]} £${this.food[j+1]}`
+    } 
 }
-
-
-drinksOrdered (){
-    return (`${this.coffeeShop.drinks[i][1]} and ${this.coffeeShop.food[i][0]}`)
 }
-console.log (coffeeShop.drinks());
-
-
-
-
-
-
-
-
+return `Food ${order}\nCost - £${cost}\n`
+}
+}
+console.log(coffeeShop.foodOrdered["Sandwich", "Soup"]);
+console.log (coffeeShop.drinksOrdered["Coffee", "Tea"]);
 

@@ -68,14 +68,19 @@ if (palindrone == palinReverse){
 }
 
 //Activity 6
-//let time = today 
-//let placeOfWork = Study
-//let townOfHome = Bedroom
+let time = 8; 
+let placeOfWork = "Study"
+let townOfHome = "Bedroom"
 
-//if (time <9) {
- // console.log 
-//}
-
+if (time ==9) {
+ console.log (`I am commuting to work from the ${placeOfWork}`); 
+} else if (time ==8) {
+  console.log (`I am at home in the ${townOfHome}`);
+} else if (time ==9){
+  console.log (`I am at work in the ${placeOfWork}`);
+} else {
+console.log (`If it is between 9-5, i am working in the ${placeOfWork}, if not i am at home in the ${townOfHome}`);
+}
 
 
 
@@ -104,15 +109,12 @@ if (wordSplit[0] === wordSplit [2]){
 
 //Activity 9
 
-let num1 = 2
-let num2 = 2
+let num1 = 2;
+let num2 = 3;
+let sumTotal = num1 + num2
 
-if (num1 + num2 == 3){
+if (sumTotal % 2 == 0){
   console.log ("This number is even");
-} else if (condition) {
-  console.log("This number is not even");
 } else {
-  
-} {
-  
-}
+  console.log("This number is not even");
+} 
